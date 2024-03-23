@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Gửi em!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="loader">
+            <div class="cardHover">
+                <div class="inner one" style="--i:1;"></div>
+                <div class="inner two" style="--i:1;"></div>
+                <div class="inner three" style="--i:1;"></div>
+                <div class="box-heart">
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+        <button><p>Click vào đây nè</p></button>
+        <div class="content">
+            <i class="fa-solid fa-xmark"></i>
+            <h1>Gửi em!</h1>
+            <p> Kính thưa Phương Anh, <br>
+                Tôi viết thư này với lòng thành thành và sự chân thành của mình để gửi lời xin lỗi sâu sắc nhất đến bạn. Tôi hiểu rằng tôi đã làm bạn cảm thấy không thoải mái và buồn phiền, và tôi muốn bạn biết rằng điều đó không phải là ý định của tôi. <br>
+                
+                Tôi đang cảm thấy hối hận và tiếc nuối vì những hành động và lời nói không thận trọng của mình đã gây ra những xúc cảm tiêu cực cho bạn. Tôi chấp nhận trách nhiệm hoàn toàn và xin lỗi bạn về điều đó. <br>
+                
+                Tôi nhận ra rằng việc xin lỗi chỉ là bước đầu tiên trong quá trình sửa chữa và cải thiện mối quan hệ của chúng ta. Tôi cam kết sẽ làm việc chăm chỉ hơn để hiểu và tôn trọng cảm xúc của bạn, và tạo ra một môi trường mà chúng ta cùng nhau có thể phát triển và hạnh phúc. <br>
+                
+                Tôi rất hy vọng bạn có thể tha thứ và mở cửa trái tim của mình để chúng ta có thể đi qua thời gian khó khăn này cùng nhau. Bạn là một phần quan trọng của cuộc sống của tôi, và tôi không muốn mất đi điều quý giá đó. <br>
+                
+                Xin hãy cho tôi cơ hội để chứng minh tình yêu và sự tôn trọng của tôi đối với bạn. Tôi sẽ luôn ở đây, lắng nghe và hỗ trợ bạn trong mọi điều. <br>
+                
+                Xin hãy nhận lời xin lỗi chân thành này từ tâm hồn của tôi. <br>
+                
+                Với tình yêu và sự biết ơn, <br>
+                Quốc Đại
+            </p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script>
+    VanillaTilt.init(document.querySelector(".wrapper"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.25,
+        gyroscopeMinAngleX: -45,
+	});
+	var btn =document.querySelector("button")
+    var closeBtn = document.querySelector(".fa-xmark");
+    btn.addEventListener("click", ()=>{
+        document.querySelector(".wrapper").classList.add("active")
+        btn.style.display="none";
+    })
+    closeBtn.addEventListener("click", ()=>{
+        document.querySelector(".wrapper").classList.remove("active")
+        btn.style.display = "block";
+    })
+</script>
+</html>
